@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Work+Sans&display=swap" rel="stylesheet"> 
+
+    <!-- Add CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Add jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Table-Top RPG Carousing Table</title>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <section class="info">
+            <div class="headline">
+                <img src="./assets/dice.svg" alt="A twenty-sided die.">
+                <h1>Table-Top RPG Carousing Table</h1>
+                <img src="./assets/dice.svg" alt="A twenty-sided die.">
+            </div>
+            <h3>Instructions:</h3>
+            <p>It's time to see how much carousing your characters are able to enjoy at the tavern! Press the <em>Roll d20</em> button below. If the  roll is 10 or higher, your player successfully handled their drink and may enjoy another, or stop carousing. If they continue to drink, press the <em>Roll d20</em> button again to continue (up to a maximum of 6 drinks). If they choose to stop, press the <em>Success</em> button, and read the results of their night of carousing. If they fail at any time, press the <em>Failure</em> button, and read their results. The more drinks the players enjoy, the more disastrous the results of their carousiing could be, but if they succeed, the rewards are also much greater!</p>
+        </section>
+
+        <section class="diceAndRolls">
+            <div class="diceRoller">
+                <button class="randomD20">Roll d20</button>
+                <div class="rollResult"></div>
+            </div>
+            <div class="drinkTally">
+                <div class="drink1"><img src="./assets/drink.svg" alt="A frothy mug of ale."></div>
+                <div class="drink2"><img src="./assets/drink.svg" alt="A frothy mug of ale."></div>
+                <div class="drink3"><img src="./assets/drink.svg" alt="A frothy mug of ale."></div>
+                <div class="drink4"><img src="./assets/drink.svg" alt="A frothy mug of ale."></div>
+                <div class="drink5"><img src="./assets/drink.svg" alt="A frothy mug of ale."></div>
+                <div class="drink6"><img src="./assets/drink.svg" alt="A frothy mug of ale."></div>
+            </div>
+            <div class="outcomeButton">
+                <button class="success">Success</button>
+                <button class="failure">Failure</button>
+            </div>
+            <div class="scroll">
+                <!-- depending on the viewport size, the browser will alternate between these two different sized scroll graphics. -->
+                <img class="desktopscroll" src="./assets/scroll-desktop.svg" alt="A scroll that is rolled up at the top and bottom.">
+                <img class="mobilescroll" src="./assets/scroll-mobile.svg" alt="A scroll that is rolled up at the top and bottom.">
+                <div class="finalResult"></div>
+            </div>
+            <div class="resetButton">
+                <button class="reset">Reset</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <a href="https://junocollege.com">Created at <span>Juno College</span></a>
+    </footer>
+
+<!-- Add JS file -->
+<script src="script.js"></script>
+
+</body>
+</html>
