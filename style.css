@@ -22,6 +22,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: azure;
     background: linear-gradient(328deg, rgb(161, 129, 54) 5%, rgba(11,1,4,1) 100%);
+    overflow-x: hidden;
 }
 
 h1 {
@@ -220,6 +221,10 @@ span {
         width: 90%;
     }
 
+    button {
+        font-size: 1rem;
+    }
+
     .scroll {
         width: 120%;
         right: 10%;
@@ -230,5 +235,6 @@ span {
         right: 10px;
         top: 50px;
         font-size: 1rem;
+        overflow-x: hidden;
     }
 }
