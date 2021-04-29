@@ -12,6 +12,10 @@ html {
     font-size: 125%;
 }
 
+* {
+    border: 2px solid red;
+}
+
 .wrapper {
     max-width: 1100px;
     width: 90%;
@@ -216,6 +220,7 @@ span {
 }
 @media (max-width: 400px) {
 
+
     .rollResult {
         width: 100px;
     }
@@ -229,15 +234,14 @@ span {
     }
 
     .scroll {
-        width: 120%;
-        right: 10%;
+        width: 100%;
     }
 
     .finalResult {
-        left: 80px;
+        left: 40px;
         top: 40px;
         font-size: 1rem;
-        width: 60%;
+        width: 80%;
         margin: 0;
     }
 }
