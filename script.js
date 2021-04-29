@@ -39,44 +39,38 @@ $(`.randomD20`).on(`click`, () => {
     });
 };
 
-// when the success button is clicked, it will:
+// when the result button is clicked, it will:
 // - determine a random number between 0 and 9
-// - based on that number, it will pull an outcome from the outcome.success object arrays randomly, based on how high the drinkNumber is.
+// - based on that number, it will pull an outcome from the outcome.failure object arrays randomly, based on how high the drinkNumber is.
+carTable.getResult = (result) => {
+    if (carTable.rollPushed === false) {
+        $(`.finalResult`).text(`You need to press the Roll d20 button first!`);
+    } else {
+        // - determine a random number between 0 and 9
+        carTable.randomNumber = Math.floor(Math.random() * carTable.outcome[result][carTable.drinkNumber].length);
+        // - based on that randomly generated umber, it will pull an outcome from the outcome object arrays, based on how high the drinkNumber is.
+        carTable.randomOutcome = carTable.outcome[result][carTable.drinkNumber][carTable.randomNumber];
+        $(`.finalResult`).text(carTable.randomOutcome);
+    };
+}
 
+// event listeners for success and failure buttons
 
 carTable.success = function(){
     $(`.success`).on(`click`, () => {
-        // if a random roll hasn't been made yet, prompt the user to make a roll
-        if (carTable.rollPushed === false) {
-            $(`.finalResult`).text(`You need to press the Roll d20 button first!`);
-        } else {
-            // - determine a random number between 0 and 9
-            carTable.randomNumber = Math.floor(Math.random() * carTable.outcome.success[carTable.drinkNumber].length);
-            // - based on that randomly generated umber, it will pull an outcome from the outcome object arrays, based on how high the drinkNumber is.
-            carTable.randomOutcome = carTable.outcome.success[carTable.drinkNumber][carTable.randomNumber];
-            $(`.finalResult`).text(carTable.randomOutcome);
-        };
+        const result = "success";
+        carTable.getResult(result);
     });
 };
-
-// when the failure button is clicked, it will:
-// - determine a random number between 0 and 9
-// - based on that number, it will pull an outcome from the outcome.failure object arrays randomly, based on how high the drinkNumber is.
 
 carTable.failure = function(){
     $(`.failure`).on(`click`, () => {
-        // if a random roll hasn't been made yet, prompt the user to make a roll
-        if (carTable.rollPushed === false) {
-            $(`.finalResult`).text(`You need to press the Roll d20 button first!`);
-        } else {
-            // - determine a random number between 0 and 9
-            carTable.randomNumber = Math.floor(Math.random() * carTable.outcome.failure[carTable.drinkNumber].length);
-            // - based on that randomly generated umber, it will pull an outcome from the outcome object arrays, based on how high the drinkNumber is.
-            carTable.randomOutcome = carTable.outcome.failure[carTable.drinkNumber][carTable.randomNumber];
-            $(`.finalResult`).text(carTable.randomOutcome);
-        };
+        const result = "failure";
+        carTable.getResult(result);
     });
 };
+
+
 
 //  when the reset button is clicked it will:
 //  - clear the finalResult div
