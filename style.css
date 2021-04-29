@@ -203,6 +203,7 @@ span {
 
     .mobilescroll {
         display: inline-block;
+        width: 90%;
     }
 
     .finalResult {
