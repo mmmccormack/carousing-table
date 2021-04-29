@@ -203,6 +203,9 @@ span {
 
     .mobilescroll {
         display: inline-block;
+    }
+
+    img.mobilescroll {
         width: 90%;
     }
 
