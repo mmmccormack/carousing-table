@@ -234,9 +234,10 @@ span {
     }
 
     .finalResult {
-        left: 40px;
-        right: 10px;
-        top: 50px;
+        left: 80px;
+        top: 40px;
         font-size: 1rem;
+        width: 60%;
+        margin: 0;
     }
 }
