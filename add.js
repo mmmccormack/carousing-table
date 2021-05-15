@@ -23,6 +23,7 @@ addEntry.addToDatabase = function(outcomeRef, outcome, drinkNumber){
     $('select').val(`0`);
     $('textarea').val(``);
     $('input[type="radio"]').removeAttr('checked');
+    alert("Your entry has been added!");
 }
 
 addEntry.reset = function(){
