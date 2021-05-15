@@ -21,7 +21,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     color: azure;
-    background: linear-gradient(328deg, rgb(161, 129, 54) 5%, rgba(11,1,4,1) 100%);
+    background: rgb(103, 77, 18);
     overflow-x: hidden;
 }
 
