@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Roboto&display=swap" rel="stylesheet"> 
+
+    <!-- Add CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Add jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Add a Carousing Result</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="headline">
+            <img src="./assets/dice.svg" alt="A twenty-sided die.">
+            <h1>Add your own entry!</h1>
+            <img src="./assets/dice.svg" alt="A twenty-sided die.">
+        </div>
+        <form>
+            <p>Fill in the form below to add your own entry to the carousing table! Outcomes can be no longer than 250 characters.</p>
+            <fieldset>
+                <legend>Choose your outcome:</legend>
+                <label for="success">Success</label>
+                <input type="radio" name="outcome" value="success" id="outcome">
+                <label for="failure">Failure</label>
+                <input type="radio" name="outcome" value="failure" id="outcome">
+            </fieldset>
+            <label for="drinkNumber">How many drinks will a player need to hit this outcome:</label>
+            <select name="drinkNumber" id="drinkNumber">
+                <option value="0">Select number of drinks</option>
+                <option value="1">1 drink</option>
+                <option value="2">2 drinks</option>
+                <option value="3">3 drinks</option>
+                <option value="4">4 drinks</option>
+                <option value="5">5 drinks</option>
+                <option value="6">6 drinks</option>
+            </select>
+            <label for="description">Enter your outcome description here (250 characters max):</label>
+            <textarea name="description" id="description" cols="30" rows="10" maxlength="250"></textarea>
+            <button type="submit" aria-label="submit" class="add success">Submit outcome</button>
+            <button type="reset" aria-label="reset" class="add reset">Reset outcome</button>
+
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+    <script src='https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js'></script>
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDmXkNr-ecHIo2WoCq6bN4owGTlYdpn6C4",
+          authDomain: "carousing-table-8e377.firebaseapp.com",
+          projectId: "carousing-table-8e377",
+          storageBucket: "carousing-table-8e377.appspot.com",
+          messagingSenderId: "485554882060",
+          appId: "1:485554882060:web:c0c3a00e9ed2a3ea345029"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+    <script src="./add.js"></script>
+</body>
+</html>

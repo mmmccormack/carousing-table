@@ -57,6 +57,7 @@
             <div class="resetButton">
                 <button class="reset">Reset</button>
             </div>
+            <p class="add">Add your own entry to the carousing table <a href="./add.html"><span>here!</span></a></p>
         </section>
     </div>
 
@@ -64,7 +65,23 @@
         <a href="https://junocollege.com">Created at <span>Juno College</span></a>
     </footer>
 
-<!-- Add JS file -->
+<!-- Add firebase scripts and JS files -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+    <script src='https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js'></script>
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDmXkNr-ecHIo2WoCq6bN4owGTlYdpn6C4",
+          authDomain: "carousing-table-8e377.firebaseapp.com",
+          projectId: "carousing-table-8e377",
+          storageBucket: "carousing-table-8e377.appspot.com",
+          messagingSenderId: "485554882060",
+          appId: "1:485554882060:web:c0c3a00e9ed2a3ea345029"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
 <script src="script.js"></script>
 
 </body>

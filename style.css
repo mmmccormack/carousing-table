@@ -170,6 +170,30 @@ span {
     font-weight: bold;
 }
 
+
+/* add an outcome page */
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+fieldset,
+legend,
+select,
+.add {
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+textarea {
+    resize: none;
+    width: 80%;
+    margin: 10px auto;
+}
+
 /* media queries */
 @media (max-width: 1020px) {
 
