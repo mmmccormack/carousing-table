@@ -27,12 +27,12 @@
             <fieldset>
                 <legend>Choose your outcome:</legend>
                 <label for="success">Success</label>
-                <input type="radio" name="outcome" value="success" id="outcome">
+                <input type="radio" name="outcome" value="success" id="outcome" required checked>
                 <label for="failure">Failure</label>
-                <input type="radio" name="outcome" value="failure" id="outcome">
+                <input type="radio" name="outcome" value="failure" id="outcome" required>
             </fieldset>
-            <label for="drinkNumber">How many drinks will a player need to hit this outcome:</label>
-            <select name="drinkNumber" id="drinkNumber">
+            <label for="drinkNumber">How many drinks will a player need to receive this outcome:</label>
+            <select name="drinkNumber" id="drinkNumber" required>
                 <option value="0">Select number of drinks</option>
                 <option value="1">1 drink</option>
                 <option value="2">2 drinks</option>
@@ -42,11 +42,14 @@
                 <option value="6">6 drinks</option>
             </select>
             <label for="description">Enter your outcome description here (250 characters max):</label>
-            <textarea name="description" id="description" cols="30" rows="10" maxlength="250"></textarea>
-            <button type="submit" aria-label="submit" class="add success">Submit outcome</button>
-            <button type="reset" aria-label="reset" class="add reset">Reset outcome</button>
+            <textarea name="description" id="description" cols="30" rows="10" maxlength="250" required></textarea>
+            <div class="addMsg"><span class="closeX" aria-label="close popup">X</span><p>Your result has been added to the table!</p></div>
+            <div class="errorMsg"><span class="closeX" aria-label="close popup">X</span><p>Please make sure you have selected an outcome (success or failure), a drink number, and included a description before submitting your entry.</p></div>
+            <input type="submit" aria-label="submit" class="add button success" value="Submit Outcome" />
+            <input type="reset" aria-label="reset" class="add button reset" />
 
         </form>
+        
         <p class="add">Return to the <a href="./index.html"><span>Carousing Table.</span></a></p>
     </div>
     <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>

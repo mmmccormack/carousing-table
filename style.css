@@ -62,7 +62,8 @@ p {
 
 /* styling buttons */
 
-button {
+button,
+.button {
     width: 140px;
     height: 80px;
     border-radius: 10px;
@@ -192,6 +193,35 @@ textarea {
     resize: none;
     width: 80%;
     margin: 10px auto;
+}
+
+.addMsg,
+.errorMsg {
+    background-color: black;
+    border-radius: 10px;
+    opacity: 0.8;
+    position: fixed;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.addMsg p,
+.errorMsg p {
+    padding: 100px;
+}
+
+.closeX {
+    position: absolute;
+    right: 5px;
+}
+
+.closeX:hover,
+.closeX:focus {
+    color: azure;
+    cursor: pointer;
 }
 
 /* media queries */
