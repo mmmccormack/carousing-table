@@ -195,11 +195,10 @@ textarea {
     margin: 10px auto;
 }
 
-.addMsg,
-.errorMsg {
+.message {
     background-color: black;
     border-radius: 10px;
-    opacity: 0.8;
+    opacity: 0.9;
     position: fixed;
     width: 50%;
     top: 50%;
@@ -208,9 +207,8 @@ textarea {
     display: none;
 }
 
-.addMsg p,
-.errorMsg p {
-    padding: 100px;
+.message p {
+    padding: 10%;
 }
 
 .closeX {
