@@ -13,7 +13,7 @@ carTable.randomD20 = function(){
 $(`.randomD20`).on(`click`, () => {
 
     // if drinkNumber is higher than 6, the user is told to reset and start again.
-        if (carTable.drinkNumber >= 6) {
+        if (carTable.drinkNumber >= 5) {
             $(`.finalResult`).text(`You've already had too much! Press RESET below to start again.`);
         } else {
             // generate a random number between 1 and 20
@@ -51,9 +51,13 @@ carTable.getResult = (result) => {
         const dbRef = firebase.database().ref();
         dbRef.on('value', (data) => {
             // - determine a random number between 0 and the endpoint of the array
-            const randomNumber = Math.floor(Math.random() * data.val()[result][carTable.drinkNumber].length);
+            let drinkNumberReference = 1;
+            if (carTable.drinkNumber !== 1) {
+                drinkNumberReference = carTable.drinkNumber + 1;
+            }
+            const randomNumber = Math.floor(Math.random() * data.val()[result][drinkNumberReference].length);
             // - based on that randomly generated umber, it will pull an outcome from the outcome object arrays, based on how high the drinkNumber is.
-            const outcome = data.val()[result][carTable.drinkNumber][randomNumber];
+            const outcome = data.val()[result][drinkNumberReference][randomNumber];
             $(`.finalResult`).text(outcome);
         })
     };
